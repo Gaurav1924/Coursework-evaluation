@@ -1,5 +1,5 @@
 "use client";
-import { CalendarPlus } from "lucide-react";
+import { Files, CalendarPlus } from "lucide-react";
 import { useStore } from "../store";
 export default function RightSidebar() {
   const score = useStore((state) => state?.score?.score);
@@ -14,22 +14,19 @@ export default function RightSidebar() {
               <span className="pr-5">{`${score}`}</span>
             </div>
           )}
-          <div className="text-white bg-white rounded-full grid place-items-center p-2">
+          <div className="text-white bg-white flex rounded-3xl  place-items-center p-2 pr-3">
             <img
               src="../../assets/streak.png"
-              className="w-12 h-12 md:w-12 md:h-12"
+              className="sm:w-4 sm:h-4"
               alt="streak"
             />
+            <span className="pr-5 text-black font-bold">{120}</span>
           </div>
           <div className="w-12 h-12 md:w-12 md:h-12 text-black bg-white rounded-full grid place-items-center">
             <CalendarPlus size={24} />
           </div>
-          <div className="text-white bg-white rounded-full grid place-items-center p-2">
-            <img
-              src="../../assets/files.png"
-              className="w-12 h-12 md:w-12 md:h-12"
-              alt="files"
-            />
+          <div className="w-12 h-12 md:w-12 md:h-12 text-black bg-white rounded-full grid place-items-center">
+            <Files size={24} />
           </div>
         </div>
       </div>
