@@ -42,11 +42,11 @@ export default function MyCourseWork() {
               <CourseworkCard key={index} {...coursework} />
             ))}
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-4">
             {!showAll && courseworkItems.length > 2 && (
               <button
                 onClick={() => setShowAll(true)}
-                className="bg-[#ADB8C9] text-white p-2 rounded-full "
+                className="font-semibold text-[#98a1bb] p-2 rounded-full "
               >
                 View All
               </button>
